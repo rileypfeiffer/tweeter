@@ -1,0 +1,64 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid;
+  padding: 1em;
+  margin: 1em;
+}
+
+.tweet:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweetHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.content {
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+.paddingTop {
+  padding-top: 0.5em;
+}
+
+.paddingRight {
+  padding-right: 1em;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  color:#4056A1;
+}
+
+.flag {
+  margin-right: 0.5em;
+}
+
+.retweet {
+  margin-right: 0.5em;
+}
+
+.flag:hover {
+  color: #E4D00A;
+}
+
+.retweet:hover {
+  color: #50C878;
+}
+
+.favourite:hover {
+  color: #FF0000;
+}

@@ -1,0 +1,40 @@
+.new-tweet {
+  width: 100%;
+  padding-bottom: 4em;
+}
+
+.underline {
+  display: flex;
+  justify-content: space-between;
+  border-top: 5px solid;
+}
+
+.counter {
+  margin-top: 15px;
+  font-family: "Bungee";
+}
+
+.placeholder {
+  width: 100%;
+  margin-top: 15px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.sendTweet {
+  margin-top: 15px;
+  font-family: "Bungee";
+  color: #FFFFFF;
+  background-color: #4056A1;
+}
+
+.error-message {
+  font-family: "Bungee";
+  color: #FF0000;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}

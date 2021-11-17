@@ -1,0 +1,27 @@
+nav {
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  color:#FFFFFF;
+  background-color: #4056a1;
+  width: 100%;
+  font-size: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.title {
+  font-family: "Bungee", "sans-serif";
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1em;
+}
+
+.write {
+  font-family: "Source Sans Pro";
+  font-size: 0.75em;
+  padding-top: 1em;
+  justify-content: flex-end;
+}
