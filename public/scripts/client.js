@@ -24,7 +24,7 @@ $(document).ready(function() {
     });
   };
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -47,18 +47,20 @@ $(document).ready(function() {
     event.preventDefault();
     $("#error").slideUp("fast");
     if (tweetTextLength < 140 && tweetTextLength > 0) {
-    $.ajax('/tweets/', {
-      method: 'POST',
-      data: formData
-    })
-    .then(function () {
-      loadTweets();
-    });
-  } else if (tweetTextLength > 140) {
-    $("#error").html("<p>Tweet too long!</p>").slideDown("slow");
-  } else if (tweetTextLength === 0) {
-    $("#error").html("<p>Tweet is empty! Try entering some text.</p>").slideDown("slow");
-  }
+      $.ajax('/tweets/', {
+        method: 'POST',
+        data: formData
+      })
+        .then(function() {
+          loadTweets();
+          $('#form-submit-tweet').trigger("reset");
+          $('.counter').val("140");
+        });
+    } else if (tweetTextLength > 140) {
+      $("#error").html("<p>Tweet too long!</p>").slideDown("slow");
+    } else if (tweetTextLength === 0) {
+      $("#error").html("<p>Tweet is empty! Try entering some text.</p>").slideDown("slow");
+    }
   });
 
   loadTweets();

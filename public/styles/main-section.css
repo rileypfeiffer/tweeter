@@ -1,0 +1,18 @@
+.main-section {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10em;
+}
+
+.tweet-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    padding-top: 5em;
+  }
+}

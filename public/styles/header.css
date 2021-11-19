@@ -1,12 +1,12 @@
 .profile {
   height: 400px;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #AB3433;
   color: #FFFFFF;
+  font-family: "Source Sans Pro";
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
@@ -14,7 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 200px;
+  flex-direction: column;
+  background-color: #ffc525;
   height: 75%;
   width: 75%;
 }
@@ -22,4 +23,21 @@
 .image {
   height: 150px;
   width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile {
+    display: flex;
+    width: 100%;
+    padding-top: 1em;
+    background-color: #ffc525;
+  }
+
+  .user {
+    display: flex;
+    justify-content: start;
+  }
+
 }

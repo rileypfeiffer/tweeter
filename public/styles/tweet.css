@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 5px solid;
   padding: 1em;
-  margin: 1em;
+  margin-bottom: 1em;
 }
 
 .tweet:hover {
@@ -13,6 +13,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin-right: 2em;
 }
 
 .tweetHeader {

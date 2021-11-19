@@ -5,7 +5,7 @@ nav {
   justify-content: space-between;
   height: 120px;
   color:#FFFFFF;
-  background-color: #4056a1;
+  background-color: #4056A1;
   width: 100%;
   font-size: 2em;
   padding-left: 1.5em;
@@ -20,8 +20,37 @@ nav {
 }
 
 .write {
-  font-family: "Source Sans Pro";
-  font-size: 0.75em;
-  padding-top: 1em;
-  justify-content: flex-end;
+    font-family: "Source Sans Pro";
+    font-size: 0.5em;
+}
+
+.arrow {
+  color: #FF0000;
+  font-size: 0.5em;
+  margin-left: 3em;
+}
+
+.right-side-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: #ffc525;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  nav {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  nav {
+    font-size: 1em;
+  }
 }
