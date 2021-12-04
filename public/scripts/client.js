@@ -5,7 +5,7 @@
  */
 
 
-
+// Creates and loads tweets
 $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
@@ -19,6 +19,7 @@ $(document).ready(function() {
       method: "GET",
       dataType: 'json',
       success: function(res) {
+        $(".tweets").html("");
         renderTweets(res);
       }
     });
@@ -41,12 +42,13 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Submits tweet if it is 140 characters or less, uses ajax to render the tweet without a page refresh/reload
   $("#form-submit-tweet").submit(function(event) {
     const formData = $(this).serialize();
     const tweetTextLength = $("#tweet-text").val().length;
     event.preventDefault();
     $("#error").slideUp("fast");
-    if (tweetTextLength < 140 && tweetTextLength > 0) {
+    if (tweetTextLength <= 140 && tweetTextLength > 0) {
       $.ajax('/tweets/', {
         method: 'POST',
         data: formData
@@ -56,6 +58,7 @@ $(document).ready(function() {
           $('#form-submit-tweet').trigger("reset");
           $('.counter').val("140");
         });
+    // if tweet is longer than 140 characters or blank, appropriate error displays
     } else if (tweetTextLength > 140) {
       $("#error").html("<p>Tweet too long!</p>").slideDown("slow");
     } else if (tweetTextLength === 0) {

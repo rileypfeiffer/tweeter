@@ -1,3 +1,4 @@
+// Function that makes the character counter work, counter turns red upon going over the limit
 $(document).ready(function() {
   $(".placeholder").on("input", function() {
     let character = $(this).val().length;
